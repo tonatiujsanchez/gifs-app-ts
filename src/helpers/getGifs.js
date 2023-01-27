@@ -1,10 +1,8 @@
-import { IGifsResponse } from "../interfaces"
 
-
-export const getGifs = async( category:string ) => {
+export const getGifs = async( category ) => {
     const url = `https://api.giphy.com/v1/gifs/search?api_key=ycZwMRmGee8d8Fv6IyLgr4EqwWOFG42E&q=${category}&limit=10`
     const resp = await fetch( url )
-    const { data }:IGifsResponse = await resp.json()
+    const { data } = await resp.json()
 
     const gifs = data.map( gif => ({
         id: gif.id,
