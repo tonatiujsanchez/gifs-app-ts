@@ -1,22 +1,19 @@
-import { ChangeEvent, FC, FormEvent, useState } from 'react';
+import { useState } from 'react';
 
 
-interface Props {
-    onAddCategory: ( value:string )=> void
-}
 
-export const FormAddCategory: FC<Props> = ({ onAddCategory }) => {
+export const FormAddCategory= ({ onAddCategory }) => {
 
 
-    const [ inputValue, setInputValue ] = useState<string>('Valorant')
+    const [ inputValue, setInputValue ] = useState('Valorant')
 
     
-    const onInputChange = ({ target }:ChangeEvent<HTMLInputElement>) => {
+    const onInputChange = ({ target }) => {
         setInputValue( target.value )
     }
 
 
-    const onSubmit = ( e:FormEvent<HTMLFormElement>) => {
+    const onSubmit = ( e) => {
         e.preventDefault()
 
         if(inputValue.trim() === ''){ return }

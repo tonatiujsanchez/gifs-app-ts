@@ -1,5 +1,3 @@
-import { FC} from 'react';
-
 import { useFetchGifs } from '../hooks'
 
 import { GifItem } from './GifItem';
@@ -7,12 +5,7 @@ import { GifItem } from './GifItem';
 
 
 
-
-interface Props {
-    category: string
-}
-
-export const GifGrid:FC<Props> = ({ category }) => {
+export const GifGrid= ({ category }) => {
 
     const { images, isLoading } = useFetchGifs( category )
     

@@ -4,10 +4,10 @@ import { FormAddCategory, GifGrid } from './components';
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState<string[]>(['One Punch', 'Gragón Ball', 'Naruto'])
+    const [categories, setCategories] = useState(['One Punch', 'Gragón Ball', 'Naruto'])
 
 
-    const onAddCategory = (value:string) => {
+    const onAddCategory = (value) => {
 
         if( categories.includes( value ) ){
             return console.log('La categoría ya existe')
