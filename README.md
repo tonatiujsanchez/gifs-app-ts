@@ -1,2 +1,13 @@
 
-# Aplicación para buscar Gifs desarrollada con React - Vite - TS
+# Aplicación para buscar Gifs
+
+__Tecnologías:__
+
+    - React
+    - Typescript
+    - Vite
+
+__API:__
+```
+https://developers.giphy.com/
+```
