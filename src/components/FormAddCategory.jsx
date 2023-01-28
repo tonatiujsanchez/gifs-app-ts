@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types'
 
 
 
 export const FormAddCategory= ({ onAddCategory }) => {
 
 
-    const [ inputValue, setInputValue ] = useState('Valorant')
+    const [ inputValue, setInputValue ] = useState('')
 
     
     const onInputChange = ({ target }) => {
@@ -14,6 +15,7 @@ export const FormAddCategory= ({ onAddCategory }) => {
 
 
     const onSubmit = ( e) => {
+
         e.preventDefault()
 
         if(inputValue.trim() === ''){ return }
@@ -24,7 +26,7 @@ export const FormAddCategory= ({ onAddCategory }) => {
     }
 
     return (
-        <form onSubmit={ onSubmit }>
+        <form onSubmit={ onSubmit } aria-label="form">
             <input 
                 type="text"
                 value={ inputValue }
@@ -34,3 +36,8 @@ export const FormAddCategory= ({ onAddCategory }) => {
         </form>
     )
 }
+
+FormAddCategory.propTypes = {
+    onAddCategory: PropTypes.func.isRequired
+}
+
